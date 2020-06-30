@@ -132,6 +132,8 @@ To get the Pipeline to execute - add the following task into the pipeline, and s
 
 ![](Images/TPAddSDK.png)
 
+Similarly, add the same task (to add the .NET SDK 2.2.207) to the top of the Release pipeline.
+
 This should be a temporary solution, until sample app is updated and the versions align.
 
 ## Summary
