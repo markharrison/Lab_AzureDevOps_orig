@@ -33,6 +33,8 @@ When the project has provisioned, the following has happenend:
 - build and release pipelines are generated, and invoked
 - an Azure DevOps Project dashboard is generated.
 
+IMPORTANT - temp fix to pipeline may be needed, see the section `Add .NET SDK` at the bottom of this document
+
 ![](Images/TPCreate2.png)
 
 Note on the Azure DevOps Project dashboard links to the AzureDevs homepage, repos, pipelines and boards.
@@ -121,6 +123,16 @@ Next we will create a User Story with two Tasks and two Test Cases.
 ![](Images/TPStorySprint1.png)
 
 ![](Images/TPStorySprint2.png)
+
+## Add .NET SDK
+
+Currently the sample app created is using .NET 2.2, but the Build Agent doesnt include .NET 2.2 as this version is at end of life.
+
+To get the Pipeline to execute - add the following task into the pipeline, and specify SDK version 2.2.207
+
+![](Images/TPAddSDK.png)
+
+This should be a temporary solution, until sample app is updated and the versions align.
 
 ## Summary
 
