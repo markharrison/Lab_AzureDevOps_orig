@@ -1,12 +1,13 @@
 # Azure DevOps - Hands-on Lab Script
 
-Mark Harrison : 26 March 2020
+Mark Harrison : 26 March 2020 ... updated 11 January 2021
 
 ![](Images/devops.png)
 
 - [Part 1 - Create Project / Application](azuredevops-1.md)
 - [Part 2 - Development](azuredevops-2.md) ... this document
 - [Part 3 - Test Plans](azuredevops-3.md)
+- [Part 4 - Accessibility Testing](azuredevops-4.md)
 
 ## Development
 
@@ -28,25 +29,39 @@ In this section we will make a code change to address the task work items - this
 
 Using Visual Studio
 
-- Connect to the Azure DevOps Project
+- Start Visual Studio
+- Enable `Git Changes` pane (Ctrl 0, Ctrl G)
+- Select `Clone Repository` button
 
-![](Images/TPVisualStudioConnect.png)
+![](Images/TPVSClone1.png)
 
-- Clone project Repo to desktop
+- Select `Browse a Repository` | `Azure DevOps`
+- Navigate to our Azure DevOps repo - and select our project
+- Note the path name where the files will be copied to - this location can be amended if required
 
-![](Images/TPVisualStudioClone.png)
+![](Images/TPVSClone2.png)
 
-- Switch view to open application project
+- Select the `Clone` button
+- Wait while the files are synced to desktop
 
-![](Images/TPVisualStudioClone2.png)
+![](Images/TPVSClone3.png)
 
-- Get branch related to Story
+- Set the startup project to apsnet-core-dotnet-core
 
-![](Images/TPVisualStudioCheckout.png)
+![](Images/TPVSClone4.png)
 
-- Make sure editing this branch locally - it will be in bold font
+- Get the remote branch related to our story - and select `checkout`
 
-![](Images/TPVisualStudioCheckout2.png)
+![](Images/TPVSClone5.png)
+
+- The local story branch should now be in bold font - indicating what branch we are developing / editing against
+
+![](Images/TPVSClone6.png)
+
+- Go to the local file repo on the desktop.
+- Copy the .GitIgnore file from the Application folder to the level above .. to stop some of the Visual Studio configuration being uploaded into the Repo
+
+![](Images/TPVSClone7.png)
 
 ### Developer Coding
 
@@ -62,37 +77,34 @@ Using Visual Studio
 
 ![](Images/TPRunWebApp.png)
 
-- Copy the .GitIgnore file from the Application folder to the level above .. to stop some of the Visual Studio configuration being uploaded into the Repo
+We can now upload our dev work to the central repo
 
-![](Images/TPGitIgnore.png)
+### Upload changes to Azure DevOps Repo
 
-### Upload changes to Repo
-
-- In Team Explorer, select the Changes view
+- In the `Git Changes` pane - note that the files amended have been detected, and are ready to be uploaded
 - Make sure branch is correct ... not the master
 - Enter Commit message
-- Enter Workitem Ids for the Story and Tasks
-- Commit all changes
+- Enter Workitem Ids for the Story and Tasks - if you type #, then a dropdown appears allowing workitems to be selected
 
 ![](Images/TPCommit1.png)
 
 ![](Images/TPCommit2.png)
 
-- Sync
+- `Commit all` changes
 
 ![](Images/TPCommit3.png)
 
-- Push
+- Push to repo - using the up arrow button
 
 ![](Images/TPCommit4.png)
 
-Repo in Azure DevOps has code changes
+The Repo in Azure DevOps now has the code changes
 
 ![](Images/TPCommit5.png)
 
 ### Pipelines Build & Deploy
 
-The build pipeline default configuration is to only start when changes to the master are detected.
+The build pipeline default configuration is set to only start when changes to the master branch are detected.
 
 - Select [Queue] a Build
 
@@ -119,6 +131,7 @@ Check the updated App has been deployed to the Dev environment
 ### Do Manual Testing
 
 At this stage - we should do our manual testing ... see the [Next](testplans-3.md) part of the lab.
+The Branch polices should be set to send the pull request to the Testers.  
 
 This remaining section of this part of the lab assumes that testing has been completed and no issues are outstanding.
 

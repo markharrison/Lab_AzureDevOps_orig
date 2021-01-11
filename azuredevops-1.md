@@ -1,12 +1,13 @@
 # Azure DevOps - Hands-on Lab Script
 
-Mark Harrison : 26 March 2020
+Mark Harrison : 26 March 2020 ... updated 11 January 2021
 
 ![](Images/devops.png)
 
 - [Part 1 - Create Project / Application](azuredevops-1.md) ... this document
 - [Part 2 - Development](azuredevops-2.md)
 - [Part 3 - Test Plans](azuredevops-3.md)
+- [Part 4 - Accessibility Testing](azuredevops-4.md)
 
 ## Overview
 
@@ -126,15 +127,9 @@ Next we will create a User Story with two Tasks and two Test Cases.
 
 ## Add .NET SDK
 
-Currently the sample app created is using .NET 2.2, but the Build Agent doesnt include .NET 2.2 as this version is at end of life.
-
-To get the Pipeline to execute - add the following task into the pipeline, and specify SDK version 2.2.207
+It is possible to amend the version of .NET used.   This is not currently required for the lab - but mnay be needed if things change.
 
 ![](Images/TPAddSDK.png)
-
-Similarly, add the same task (to add the .NET SDK 2.2.207) to the top of the Release pipeline.
-
-This should be a temporary solution, until sample app is updated and the versions align.
 
 ## Summary
 
