@@ -23,7 +23,7 @@ The task configuration allows selection of the required standards to be validate
 
 ![](Images/TPAccessibility3.png)
 
-Now add a User Story to get detected issues fixed !
+Now add a User Story to get the detected issues fixed !
 
 ---
 
