@@ -6,8 +6,17 @@ Mark Harrison : 26 March 2020 ... updated 11 January 2021
 
 - [Part 1 - Create Project / Application](azuredevops-1.md)
 - [Part 2 - Development](azuredevops-2.md)
-- [Part 3 - Test Plans](azuredevops-3.md) 
+- [Part 3 - Test Plans](azuredevops-3.md)
 - [Part 4 - Accessibility Testing](azuredevops-4.md) ... this document
+
+## Accessibility  
+
+Recent regulations mean UK public sector organisations have a legal duty to make sure websites and
+apps meet accessibility requirements. Commercial organisations should also adhere to these
+requirements because it’s the right thing to do.
+
+Microsoft is committed to revolutionizing access to technology for people living with disabilities—
+impacting employment and quality of life for more than a billion people in the world.
 
 ## Accessibility Testing
 
@@ -24,6 +33,11 @@ The task configuration allows selection of the required standards to be validate
 ![](Images/TPAccessibility3.png)
 
 Now add a User Story to get the detected issues fixed !
+
+## More info
+
+- <https://www.microsoft.com/accessibility>
+- <https://accessibilityinsights.io/>
 
 ---
 
