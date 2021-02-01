@@ -18,6 +18,7 @@ Azure DevOps provide rich and powerful tools everyone in the team can use to dri
 Use Azure DevOps Projects <https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/microsoft.visualstudio%2Faccount%2Fproject>
 
 - Create a .NET project ... suggest use Windows AppService F1 free tier
+  - if you see message on screen "Setting up DevOps starter with GitHub, change settings here" - click on here and change to Azure DevOps
   - Choose `.NET` | [Next]
   - Choose `ASP.NET Core` | [Next]
   - Choose `Windows Wep App` | [Next]
